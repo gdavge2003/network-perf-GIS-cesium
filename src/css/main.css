@@ -1,0 +1,110 @@
+.backdrop {
+    background: rgba(42, 42, 42, 0.7);
+    border-radius: 5px;
+    border: 1px solid #444;
+    padding: 0px 15px 15px 15px;
+    color: #fff;
+    line-height: 150%;
+    font-size: small;
+    width: fit-content;
+}
+
+.backdrop input {
+    vertical-align: middle;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#heightSliderLabel, #heightValue {
+    vertical-align: top;
+}
+
+.backdrop a:link, .backdrop a:visited, .backdrop a:hover {
+    color: #fff
+}
+
+.cover {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#information {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#menu {
+
+}
+
+#reverse_range {
+  direction: rtl;
+}
+
+#legend {
+    float: bottom;
+    margin-top: 5px;
+}
+
+.legend-colored-icon {
+	width: 12px;
+	height: 12px;
+  margin: 3px 3px 0px 3px;
+  display: inline-block;
+}
+
+.rxlev-green {
+  background: #42F480;
+}
+
+.rxlev-yellow {
+  background: #F4F442;
+}
+
+.rxlev-red {
+  background: #F42323;
+}
+
+.rxlev-gray {
+  background: #7C7676;
+}
+
+.op-snr-rank1 {
+  background: #e2188e;
+}
+
+.op-snr-rank2 {
+  background: #4d189b;
+}
+
+.op-snr-rank3 {
+  background: #7ddbd0
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+html, body, #cesiumContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    background: #000;
+}
+
+button.cesium-infoBox-camera {
+    display: none;
+}
+
+#3DTiles {
+    padding-top: 10px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>T-Mobile Starling OpenSignal</title>
+  </head>
+  <body>
+    <!-- container for CESIUM VIEWER -->
+    <div id="cesiumContainer"></div>
+    <div id="loadingOverlay"><h1>Loading...</h1></div>
+
+    <div id="information">
+      <!-- menu elements -->
+      <div class="backdrop" id="menu">
+        <h2>Toolbar</h2>
+        <span><strong>West Region</strong></span>
+
+        <table>
+          <tbody><tr>
+            <td>
+              <input id="rxlev_show" name="source" type="checkbox" />
+            </td>
+            <td>
+              <label for="rxlev_show">Rxlev by Zip Code</label>
+            </td>
+            <td>
+              <input id="reverse_range" type="range" min="-130" max="-85" step="0.2" data-bind="value: rxlevRange, valueUpdate: 'input'">
+              <input type="text" size="2" data-bind="value: rxlevRange">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input id="opensignal_snr_show" name="source" type="checkbox" />
+            </td>
+            <td>
+              <label for="opensignal_snr_show">SNR by Zip Code</label>
+            </td>
+            <td>
+              <input type="range" min="0" max="35" step="0.1" data-bind="value: snrRange, valueUpdate: 'input'">
+              <input type="text" size="2" data-bind="value: snrRange">
+            </td>
+          </tr>
+        </tbody>
+        </table>
+
+        <table id="snr_rank_filter" style="display:none;">
+          <tbody>
+            <tr>
+              <td>
+                Filter by SNR Rank:
+              </td>
+              <td>
+                <input id="opensignal_snr_show1" name="source" type="checkbox" checked />
+              </td>
+              <td>
+                <div class="legend-colored-icon op-snr-rank1"></div> Rank 1</div>
+              </td>
+            </tr>
+            <tr><td></td>
+              <td>
+                <input id="opensignal_snr_show2" name="source" type="checkbox" checked />
+              </td>
+              <td>
+                <div class="legend-colored-icon op-snr-rank2"></div> Rank 2</div>
+              </td>
+            </tr>
+            <tr><td></td>
+              <td>
+                <input id="opensignal_snr_show3" name="source" type="checkbox" checked />
+              </td>
+              <td>
+                <div class="legend-colored-icon op-snr-rank3"></div> Rank 3 and Higher</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <!-- legend elements -->
+      <div class="backdrop" id="legend">
+        <h3>Legend</h3>
+        <div class="legend_content" id="west_rxlev"></div>
+
+        <div class="legend_content" id="op_snr"></div>
+
+      </div>
+    </div>
+
+    <!-- app source code -->
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

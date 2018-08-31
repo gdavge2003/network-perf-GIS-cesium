@@ -1,0 +1,23 @@
+{
+  "name": "cesium_wpack",
+  "version": "1.0.0",
+  "description": "cesium_test",
+  "main": "index.js",
+  "scripts": {
+    "build": "node_modules/.bin/webpack --config webpack.config.js",
+    "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js --open"
+  },
+  "author": "alok",
+  "license": "ISC",
+  "devDependencies": {
+    "cesium": "^1.47.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
